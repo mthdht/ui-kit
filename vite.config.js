@@ -15,7 +15,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/library.js'),
+      entry: resolve(__dirname, './src/library.js'),
       name: 'Ui-kit',
       // the proper extensions will be added
       fileName: 'ui-kit',

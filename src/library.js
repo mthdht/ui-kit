@@ -1,11 +1,11 @@
-import * as components from './components';
+import * as components from '@/components';
 
 const uikit = {
-    install(Vue, options = {}) {
+    install(app, options = {}) {
       // components
       for (const componentName in components) {
         const component = components[componentName];
-        Vue.component(component.name, component);
+        app.component(component.name, component);
       }
     },
 };
