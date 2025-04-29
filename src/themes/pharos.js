@@ -1,4 +1,4 @@
-export const theme = {
+export const pharos = {
     colors: {
         primary: 'bg-emerald-500',
         red: {

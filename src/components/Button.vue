@@ -7,8 +7,7 @@
 </template>
 
 <script setup>
-import { useTheme } from '@/composables/useTheme.js'
-
+import { inject } from 'vue'
 
 const props = defineProps({
     color: {
@@ -31,9 +30,7 @@ const props = defineProps({
         }
     }
 })
-
-
-const { getThemeClasses } = useTheme()
-const themeClasses = getThemeClasses(props)
+const theme = inject('theme')
+const themeClasses = theme.getThemeClasses(props)
 
 </script>

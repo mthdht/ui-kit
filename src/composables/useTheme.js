@@ -1,9 +1,5 @@
-import { theme } from "../themes/pharos";
-
-export function useTheme() {
-
+export function useTheme(theme) {
     function getThemeClasses(props) {
-        console.log(props);
         const classes = []
         if (props.color && !props.outline) {
             classes.push(theme.colors[props.color].base)
