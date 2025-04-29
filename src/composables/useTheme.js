@@ -2,8 +2,13 @@ import { theme } from "../themes/pharos";
 
 export function useTheme() {
 
-    function getThemeClasses() {
-        return theme.colors.primary
+    function getThemeClasses(props) {
+        const classes = []
+        if (props.color) {
+            classes.push(theme.colors[props.color])
+        }
+
+        return classes
     }
 
 
