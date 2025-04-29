@@ -4,7 +4,7 @@ import Button from '@/components/Button.vue';
 
 <template>
   <div class="p-4">
-    <Button>Lorem, ipsum.</Button>
+    <Button outline>Lorem, ipsum.</Button>
   </div>
   
 </template>

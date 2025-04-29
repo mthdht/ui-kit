@@ -16,6 +16,10 @@ const props = defineProps({
     hover: {
         type: Boolean,
         default: true
+    },
+    outline: {
+        type: Boolean,
+        default: false
     }
 })
 
