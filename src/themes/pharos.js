@@ -7,5 +7,11 @@ export const theme = {
             outline: 'border border-red-500 text-red-500',
             outlineHover: 'hover:bg-red-500 hover:text-white'
         }
+    },
+    radius: {
+        base: 'rounded',
+        none: 'rounded-none',
+        large: 'rounded-lg',
+        full: 'rounded-full'
     }
 }

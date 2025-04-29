@@ -19,6 +19,10 @@ export function useTheme() {
             classes.push(theme.colors[props.color].outline)
         }
 
+        if (props.rounded) {
+            classes.push(theme.radius[props.rounded])
+        }
+
         return classes
     }
 

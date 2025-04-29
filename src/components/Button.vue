@@ -1,5 +1,7 @@
 <template>
-    <button :class="themeClasses" class="px-3 py-2 cursor-pointer rounded font-semibold">
+    <button
+        :class="themeClasses" 
+        class="px-3 py-2 cursor-pointer font-semibold transition">
         <slot></slot>
     </button>
 </template>
@@ -20,6 +22,13 @@ const props = defineProps({
     outline: {
         type: Boolean,
         default: false
+    },
+    rounded: {
+        type: String,
+        default: 'base',
+        validator(value) {
+            return ['base', 'none', 'large', 'full'].includes(value)
+        }
     }
 })
 
