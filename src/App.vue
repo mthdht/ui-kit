@@ -3,8 +3,8 @@ import Button from '@/components/Button.vue';
 </script>
 
 <template>
-  <div>
-    <Button>ok</Button>
+  <div class="p-4">
+    <Button>Lorem, ipsum.</Button>
   </div>
   
 </template>

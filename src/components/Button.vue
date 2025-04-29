@@ -1,5 +1,5 @@
 <template>
-    <button :class="themeClasses">
+    <button :class="themeClasses" class="px-3 py-2 cursor-pointer rounded font-semibold">
         <slot></slot>
     </button>
 </template>
@@ -12,6 +12,10 @@ const props = defineProps({
     color: {
         type: String,
         default: 'red'
+    },
+    hover: {
+        type: Boolean,
+        default: true
     }
 })
 
