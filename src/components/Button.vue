@@ -11,7 +11,7 @@
     <button
         v-else
         :class="themeClasses" 
-        class="l-button px-3 py-2 cursor-pointer font-semibold transition">
+        class="l-button px-3 py-2 cursor-pointer font-semibold transition disabled:bg-slate-200 disabled:text-slate-500 disabled:cursor-not-allowed">
         <slot></slot>
     </button>
 </template>
@@ -47,7 +47,7 @@ const props = defineProps({
     unstyle: {
         type: Boolean,
         default: false
-    }
+    },
 })
 const theme = inject('theme')
 

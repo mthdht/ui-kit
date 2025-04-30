@@ -3,7 +3,7 @@ export function useTheme(theme) {
         if (props.unstyle) {
             return 
         }
-        
+
         const classes = []
         if (props.color && !props.outline) {
             classes.push(theme.colors[props.color].base)
@@ -25,6 +25,10 @@ export function useTheme(theme) {
 
         if (props.shadow) {
             classes.push(theme.shadow)
+        }
+
+        if (props.disabled) {
+            classes.push("disabled:bg-slate-200 disabled:text-slate-500 disabled:cursor-not-allowed")
         }
 
         return classes
