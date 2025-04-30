@@ -2,7 +2,7 @@
     <a 
         v-if="props.href"
         :href="props.href" 
-        class="l-button cursor-pointer font-semibold transition disabled:bg-slate-200 disabled:text-slate-500 disabled:cursor-not-allowed" 
+        class="l-button flex items-center gap-2 cursor-pointer font-semibold transition disabled:bg-slate-200 disabled:text-slate-500 disabled:cursor-not-allowed" 
         :class="themeClasses" 
     >
         <slot></slot>
@@ -12,7 +12,7 @@
         v-else
         type="button"
         :class="themeClasses" 
-        class="l-button cursor-pointer font-semibold transition disabled:bg-slate-200 disabled:text-slate-500 disabled:cursor-not-allowed">
+        class="l-button flex items-center gap-2 cursor-pointer font-semibold transition disabled:bg-slate-200 disabled:text-slate-500 disabled:cursor-not-allowed">
         <slot></slot>
     </button>
 </template>
@@ -28,9 +28,9 @@ const props = defineProps({
     },
     size: {
         type: String,
-        default: 'normal',
+        default: 'base',
         validator(value) {
-            return ['normal', 'large', 'small'].includes(value)
+            return ['base', 'large', 'small'].includes(value)
         }
     },
     hover: {
@@ -57,6 +57,7 @@ const props = defineProps({
         default: false
     },
 })
+
 const theme = inject('theme')
 
 const themeClasses = computed(() => {

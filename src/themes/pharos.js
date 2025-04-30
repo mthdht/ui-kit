@@ -17,7 +17,9 @@ export const pharos = {
     shadow: 'shadow',
     sizes: {
         button: {
-            normal: 'px-3 py-2'
+            base: 'px-3 py-2',
+            large: 'px-5 py-3 text-xl'
         }
-    }
+    },
+    padding: 'p-4'
 }

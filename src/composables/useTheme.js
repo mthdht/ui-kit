@@ -40,5 +40,5 @@ export function useTheme(theme) {
     }
 
 
-    return { getThemeClasses }
+    return { theme, getThemeClasses }
 }
