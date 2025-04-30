@@ -1,15 +1,26 @@
 <template>
-    <button
+    <a 
+        v-if="props.href"
+        :href="props.href" 
+        class="l-button px-3 py-2 cursor-pointer font-semibold transition" 
         :class="themeClasses" 
-        class="px-3 py-2 cursor-pointer font-semibold transition">
+    >
+        <slot></slot>
+    </a>
+    
+    <button
+        v-else
+        :class="themeClasses" 
+        class="l-button px-3 py-2 cursor-pointer font-semibold transition">
         <slot></slot>
     </button>
 </template>
 
 <script setup>
-import { inject } from 'vue'
+import { inject, computed } from 'vue'
 
 const props = defineProps({
+    href: String,
     color: {
         type: String,
         default: 'red'
@@ -31,6 +42,9 @@ const props = defineProps({
     }
 })
 const theme = inject('theme')
-const themeClasses = theme.getThemeClasses(props)
+
+const themeClasses = computed(() => {
+    return theme.getThemeClasses(props)
+})
 
 </script>
