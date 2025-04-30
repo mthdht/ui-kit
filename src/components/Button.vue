@@ -7,7 +7,7 @@
     >
         <slot></slot>
     </a>
-    
+
     <button
         v-else
         :class="themeClasses" 
@@ -39,11 +39,20 @@ const props = defineProps({
         validator(value) {
             return ['base', 'none', 'large', 'full'].includes(value)
         }
+    },
+    shadow: {
+        type: Boolean,
+        default: true
+    },
+    unstyle: {
+        type: Boolean,
+        default: false
     }
 })
 const theme = inject('theme')
 
 const themeClasses = computed(() => {
+    console.log(theme.getThemeClasses(props));
     return theme.getThemeClasses(props)
 })
 

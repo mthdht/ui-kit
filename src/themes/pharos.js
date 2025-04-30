@@ -13,5 +13,6 @@ export const pharos = {
         none: 'rounded-none',
         large: 'rounded-lg',
         full: 'rounded-full'
-    }
+    },
+    shadow: 'shadow'
 }

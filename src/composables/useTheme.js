@@ -1,5 +1,9 @@
 export function useTheme(theme) {
     function getThemeClasses(props) {
+        if (props.unstyle) {
+            return 
+        }
+        
         const classes = []
         if (props.color && !props.outline) {
             classes.push(theme.colors[props.color].base)
@@ -17,6 +21,10 @@ export function useTheme(theme) {
 
         if (props.rounded) {
             classes.push(theme.radius[props.rounded])
+        }
+
+        if (props.shadow) {
+            classes.push(theme.shadow)
         }
 
         return classes
