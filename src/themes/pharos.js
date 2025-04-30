@@ -9,10 +9,15 @@ export const pharos = {
         }
     },
     radius: {
-        base: 'rounded',
+        normal: 'rounded',
         none: 'rounded-none',
         large: 'rounded-lg',
         full: 'rounded-full'
     },
-    shadow: 'shadow'
+    shadow: 'shadow',
+    sizes: {
+        button: {
+            normal: 'px-3 py-2'
+        }
+    }
 }

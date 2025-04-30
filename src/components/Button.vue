@@ -2,7 +2,7 @@
     <a 
         v-if="props.href"
         :href="props.href" 
-        class="l-button px-3 py-2 cursor-pointer font-semibold transition" 
+        class="l-button cursor-pointer font-semibold transition disabled:bg-slate-200 disabled:text-slate-500 disabled:cursor-not-allowed" 
         :class="themeClasses" 
     >
         <slot></slot>
@@ -10,8 +10,9 @@
 
     <button
         v-else
+        type="button"
         :class="themeClasses" 
-        class="l-button px-3 py-2 cursor-pointer font-semibold transition disabled:bg-slate-200 disabled:text-slate-500 disabled:cursor-not-allowed">
+        class="l-button cursor-pointer font-semibold transition disabled:bg-slate-200 disabled:text-slate-500 disabled:cursor-not-allowed">
         <slot></slot>
     </button>
 </template>
@@ -25,6 +26,13 @@ const props = defineProps({
         type: String,
         default: 'red'
     },
+    size: {
+        type: String,
+        default: 'normal',
+        validator(value) {
+            return ['normal', 'large', 'small'].includes(value)
+        }
+    },
     hover: {
         type: Boolean,
         default: true
@@ -35,9 +43,9 @@ const props = defineProps({
     },
     rounded: {
         type: String,
-        default: 'base',
+        default: 'normal',
         validator(value) {
-            return ['base', 'none', 'large', 'full'].includes(value)
+            return ['normal', 'none', 'large', 'full'].includes(value)
         }
     },
     shadow: {
@@ -52,8 +60,8 @@ const props = defineProps({
 const theme = inject('theme')
 
 const themeClasses = computed(() => {
-    console.log(theme.getThemeClasses(props));
-    return theme.getThemeClasses(props)
+    console.log(theme.getThemeClasses(props, 'button'));
+    return theme.getThemeClasses(props, 'button')
 })
 
 </script>
