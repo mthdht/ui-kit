@@ -13,7 +13,7 @@ import Avatar from './components/Avatar.vue';
       Lorem, ipsum.
     </Button>
 
-    <Alert shadow>
+    <Alert shadow variant="outline">
       ok
     </Alert>
 
@@ -21,7 +21,7 @@ import Avatar from './components/Avatar.vue';
 
     <br>
 
-    <Avatar src="ok"></Avatar>
+    <Avatar aspect="square" fallback="MD"></Avatar>
   </div>
   
 </template>

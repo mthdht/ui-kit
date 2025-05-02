@@ -1,5 +1,6 @@
 export function useTheme(theme) {
     function getThemeClasses(props, component) {
+        console.log(props);
         const classes = []
 
         if (props.unstyle) {
@@ -31,7 +32,8 @@ export function useTheme(theme) {
         }
 
         if (props.aspect) {
-            const radius = props.aspect === 'circle' ? 'full' : 'rounded'
+            console.log('ok');
+            const radius = props.aspect === 'circle' ? 'full' : 'large'
             classes.push(theme.radius[radius])
         }
 
