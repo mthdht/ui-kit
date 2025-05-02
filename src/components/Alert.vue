@@ -15,12 +15,20 @@ import { X } from 'lucide-vue-next'
 const props = defineProps({
     color: {
         type: String,
-        default: 'red'
+        default: 'default'
     },
     dismissible: {
         type: Boolean,
         default: true
-    }
+    },
+    shadow: {
+        type: Boolean,
+        default: false
+    },
+    unstyle: {
+        type: Boolean,
+        default: false
+    },
 })
 const pharos = inject('pharos')
 

@@ -1,4 +1,10 @@
 export const colors = {
+    default: {
+        base: 'bg-slate-50 text-slate-700', 
+        hover: 'hover:bg-slate-100',
+        outline: 'border border-slate-500 text-slate-700',
+        outlineHover: 'hover:bg-slate-200'
+    },
     red: {
         base: 'bg-red-500 text-white', 
         hover: 'hover:bg-red-400',

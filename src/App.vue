@@ -2,18 +2,21 @@
 import Button from '@/components/Button.vue';
 import Alert from '@/components/Alert.vue'
 import { Plus } from 'lucide-vue-next'
+import Badge from './components/Badge.vue';
 </script>
 
 <template>
   <div class="p-4 space-y-8">
-    <Button rounded="large" size="small" color="lime">
+    <Button shadow>
       <Plus class=""></Plus>
       Lorem, ipsum.
     </Button>
 
-    <Alert>
+    <Alert shadow>
       ok
     </Alert>
+
+    <Badge color="emerald" size="base" outline>some badge</Badge>
   </div>
   
 </template>

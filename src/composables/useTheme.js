@@ -7,17 +7,17 @@ export function useTheme(theme) {
         }
 
         if (props.color && !props.outline) {
-            classes.push(theme.colors[props.color].base)
+            classes.push(theme.colors[props.color]?.base)
         }
 
         if (props.hover) {
             props.outline 
-                ? classes.push(theme.colors[props.color].outlineHover) 
-                : classes.push(theme.colors[props.color].hover)
+                ? classes.push(theme.colors[props.color]?.outlineHover) 
+                : classes.push(theme.colors[props.color]?.hover)
         }
 
         if (props.outline) {
-            classes.push(theme.colors[props.color].outline)
+            classes.push(theme.colors[props.color]?.outline)
         }
 
         if (props.rounded) {
