@@ -11,9 +11,7 @@ export function useTheme(theme) {
         }
 
         if (props.hover) {
-            props.variant == 'outline' 
-                ? classes.push(theme.colors[props.color]?.outlineHover) 
-                : classes.push(theme.colors[props.color]?.hover)
+            classes.push(theme.colors[props.color]?.hover[props.variant])
         }
 
         if (props.rounded) {
