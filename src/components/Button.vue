@@ -24,7 +24,7 @@ const props = defineProps({
     href: String,
     color: {
         type: String,
-        default: 'red'
+        default: 'slate'
     },
     size: {
         type: String,
@@ -58,11 +58,10 @@ const props = defineProps({
     },
 })
 
-const theme = inject('theme')
+const pharos = inject('pharos')
 
 const themeClasses = computed(() => {
-    console.log(theme.getThemeClasses(props, 'button'));
-    return theme.getThemeClasses(props, 'button')
+    return pharos.getThemeClasses(props, 'button')
 })
 
 </script>

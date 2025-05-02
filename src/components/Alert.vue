@@ -1,8 +1,8 @@
 <template>
     <Transition>
-        <div class="l-alert" :class="[themeClasses, theme.theme.padding]" v-show="isOpen">
+        <div class="l-alert" :class="[themeClasses, pharos.theme.padding]" v-show="isOpen">
             <slot></slot>
-            <X class="float-right" v-if="props.dismissible" @click="isOpen = false"></X>
+            <X class="float-right cursor-pointer" v-if="props.dismissible" @click="isOpen = false"></X>
         </div>
     </Transition>
 </template>
@@ -22,13 +22,12 @@ const props = defineProps({
         default: true
     }
 })
-const theme = inject('theme')
+const pharos = inject('pharos')
 
 const isOpen = ref(true)
 
 const themeClasses = computed(() => {
-    console.log(theme.getThemeClasses(props, 'button'));
-    return theme.getThemeClasses(props, 'alert')
+    return pharos.getThemeClasses(props, 'alert')
 })
 </script>
 

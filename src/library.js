@@ -9,7 +9,7 @@ const uikit = {
         app.component(component.name, component);
       }
 
-      app.provide('theme', useTheme(options.theme))
+      app.provide('pharos', useTheme(options.theme))
     }
 };
 

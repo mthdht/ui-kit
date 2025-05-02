@@ -1,13 +1,7 @@
+import { colors } from './colors.js'
+
 export const pharos = {
-    colors: {
-        primary: 'bg-emerald-500',
-        red: {
-            base: 'bg-red-500 text-white', 
-            hover: 'hover:bg-red-400',
-            outline: 'border border-red-500 text-red-500',
-            outlineHover: 'hover:bg-red-500 hover:text-white'
-        }
-    },
+    colors: colors,
     radius: {
         normal: 'rounded',
         none: 'rounded-none',
@@ -18,6 +12,7 @@ export const pharos = {
     sizes: {
         button: {
             base: 'px-3 py-2',
+            small: 'px-2 py-1',
             large: 'px-5 py-3 text-xl'
         }
     },

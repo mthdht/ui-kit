@@ -6,8 +6,8 @@ import { Plus } from 'lucide-vue-next'
 
 <template>
   <div class="p-4 space-y-8">
-    <Button rounded="large" size="large">
-      <Plus class="" size="50"></Plus>
+    <Button rounded="large" size="small" color="lime">
+      <Plus class=""></Plus>
       Lorem, ipsum.
     </Button>
 
