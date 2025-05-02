@@ -24,6 +24,13 @@ const props = defineProps({
             return ['base', 'outline', 'light', 'text'].includes(value)
         }
     },
+    rounded: {
+        type: String,
+        default: 'medium',
+        validator(value) {
+            return ['medium', 'none', 'large', 'full'].includes(value)
+        }
+    },
     dismissible: {
         type: Boolean,
         default: true

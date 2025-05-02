@@ -1,5 +1,5 @@
 <template>
-    <span class="l-badge inline-flex items-center gap-2 transition" :class="[themeClasses, pharos.theme.padding]">
+    <span class="l-badge inline-flex items-center gap-2 transition" :class="[themeClasses]">
         <slot></slot>
     </span>
 </template>
@@ -46,7 +46,7 @@ const props = defineProps({
 const pharos = inject('pharos')
 
 const themeClasses = computed(() => {
-    return pharos.getThemeClasses(props, 'button')
+    return pharos.getThemeClasses(props, 'badge')
 })
 </script>
 

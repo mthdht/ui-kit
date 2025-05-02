@@ -46,9 +46,9 @@ const props = defineProps({
     },
     rounded: {
         type: String,
-        default: 'normal',
+        default: 'medium',
         validator(value) {
-            return ['normal', 'none', 'large', 'full'].includes(value)
+            return ['medium', 'none', 'large', 'full'].includes(value)
         }
     },
     shadow: {

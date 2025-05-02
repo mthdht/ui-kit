@@ -30,6 +30,11 @@ export function useTheme(theme) {
             classes.push(theme.sizes[component][props.size])
         }
 
+        if (props.aspect) {
+            const radius = props.aspect === 'circle' ? 'full' : 'rounded'
+            classes.push(theme.radius[radius])
+        }
+
         return classes
     }
 

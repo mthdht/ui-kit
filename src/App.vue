@@ -3,6 +3,7 @@ import Button from '@/components/Button.vue';
 import Alert from '@/components/Alert.vue'
 import { Plus } from 'lucide-vue-next'
 import Badge from './components/Badge.vue';
+import Avatar from './components/Avatar.vue';
 </script>
 
 <template>
@@ -16,7 +17,11 @@ import Badge from './components/Badge.vue';
       ok
     </Alert>
 
-    <Badge color="orange" variant="light">some badge</Badge>
+    <Badge color="orange" variant="light" rounded="medium" size="small">Orange</Badge>
+
+    <br>
+
+    <Avatar src="ok"></Avatar>
   </div>
   
 </template>
