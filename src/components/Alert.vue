@@ -17,6 +17,13 @@ const props = defineProps({
         type: String,
         default: 'default'
     },
+    variant: {
+        type: String,
+        default: 'base',
+        validator(value) {
+            return ['base', 'outline', 'light', 'text'].includes(value)
+        }
+    },
     dismissible: {
         type: Boolean,
         default: true

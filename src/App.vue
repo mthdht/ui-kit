@@ -7,7 +7,7 @@ import Badge from './components/Badge.vue';
 
 <template>
   <div class="p-4 space-y-8">
-    <Button shadow>
+    <Button shadow variant="outline">
       <Plus class=""></Plus>
       Lorem, ipsum.
     </Button>
@@ -16,7 +16,7 @@ import Badge from './components/Badge.vue';
       ok
     </Alert>
 
-    <Badge color="emerald" size="base" outline>some badge</Badge>
+    <Badge color="emerald" size="base" variant="outline">some badge</Badge>
   </div>
   
 </template>

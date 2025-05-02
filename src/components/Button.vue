@@ -26,6 +26,13 @@ const props = defineProps({
         type: String,
         default: 'default'
     },
+    variant: {
+        type: String,
+        default: 'base',
+        validator(value) {
+            return ['base', 'outline', 'light', 'text'].includes(value)
+        }
+    },
     size: {
         type: String,
         default: 'base',
@@ -36,10 +43,6 @@ const props = defineProps({
     hover: {
         type: Boolean,
         default: true
-    },
-    outline: {
-        type: Boolean,
-        default: false
     },
     rounded: {
         type: String,

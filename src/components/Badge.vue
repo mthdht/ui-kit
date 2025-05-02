@@ -1,5 +1,5 @@
 <template>
-    <span class="l-badge inline-flex items-center gap-2" :class="[themeClasses, pharos.theme.padding]">
+    <span class="l-badge inline-flex items-center gap-2 transition" :class="[themeClasses, pharos.theme.padding]">
         <slot></slot>
     </span>
 </template>
@@ -11,6 +11,13 @@ const props = defineProps({
     color: {
         type: String,
         default: 'default'
+    },
+    variant: {
+        type: String,
+        default: 'base',
+        validator(value) {
+            return ['base', 'outline', 'light', 'text'].includes(value)
+        }
     },
     unstyle: {
         type: Boolean,
@@ -25,7 +32,7 @@ const props = defineProps({
     },
     hover: {
         type: Boolean,
-        default: false
+        default: true
     },
     rounded: {
         type: String,
@@ -33,10 +40,6 @@ const props = defineProps({
         validator(value) {
             return ['normal', 'none', 'large', 'full'].includes(value)
         }
-    },
-    outline: {
-        type: Boolean,
-        default: false
     },
 })
 
